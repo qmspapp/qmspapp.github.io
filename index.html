@@ -1,1 +1,64 @@
-<h1>hello world！</h1>
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>全民视频-APP下载</title>
+    <meta name="keywords" content="全民视频">
+    <meta name="description" content="全民视频">
+    <link rel="stylesheet" type="text/css" href="./app_files/app.css">
+	
+    <link rel="stylesheet" href="./app_files/main.css">
+	
+</head>
+
+<body class="appdownload-body">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+</script>
+
+<div style='display:none;' class="wechat_tip_content">
+  <div class="wechat_tip" style="background:#F00; color:#FFF">
+    <i class="triangle-up"></i>请点击右上角<br>在
+浏览器中打开</div>
+</div>
+<script>
+
+ 
+ $(function(){
+
+var browser = navigator.userAgent.toLowerCase();
+if (browser.match(/MicroMessenger/i) == 'micromessenger') {
+  //微信浏览器
+  $(".wechat_tip_content").show();
+} else if(browser.indexOf(' qq') != -1 && browser.indexOf('mqqbrowser') != -1){
+  //qq内置浏览器
+  $(".wechat_tip_content").show();
+  var url = window.location.href;
+	window.location.href = "mttbrowser://url="+url;	 
+} else if(browser.indexOf('mqqbrowser') != -1 && browser.indexOf(" qq") == -1){
+
+} else {
+}
+   $(".actions").show();
+ 
+ 	
+ 
+ })
+</script>
+<div class="mb-stars"></div>
+<div class="page-bg-btm mobile"></div>
+<div class="appdownload-wrap">
+    <div class="appdownload-logo">
+        <img src="./images/icon.png" width="120" height="120">
+        <p class="appname">全民视频</p>
+    </div>
+    <div class="appdownload-btns">
+        <a class="btn item-android" href="./apk/qmsp2.0.apk" style="text-align: center">
+		
+            <span class="txt" style="float: none"> 官方下载</span>
+        </a>
+
+       
+    </div>
+    <p style="text-align: center;color: white; width: 60%;margin: 0 auto">提示：全民视频-免费看片-主播福利-国产自拍-看片app</p>
+</div>
+</body></html>
