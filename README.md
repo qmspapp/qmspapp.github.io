@@ -1,1 +1,0 @@
-# qmspapp.github.io
